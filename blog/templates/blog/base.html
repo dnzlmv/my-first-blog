@@ -11,7 +11,9 @@
     </head>
 
 	<body>
+    <!-- Wrapper begin -->
     <div id="wrapper">
+      <!-- Header begin -->
     		<div class="page-header">
 		    {% if user.is_authenticated %}
 			  <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -25,6 +27,27 @@
 			<h1><a href="/">MV Network Solutions</a></h1>
 			<h2>Willkommen auf mv-networks.net</h2>
     		</div>
+      <!-- Header end -->
+
+      <!-- Content Rechts begin -->
+
+
+        <div class="content_rechts">
+          <p>Webangebote:</p>
+          <div class="panel eins">
+          <a href="https://www.hs-wismar.de" target="_blank" rel="noopener noreferrer"><img width="170px" src="{% static 'bilder/hswismar.png' %}" alt="hswismar"  /></a>
+          </div>
+          <div class="panel zwei">
+          <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer"><img width="300px" src="{% static 'bilder/django.png' %}" alt="django"  /></a>
+          </div>
+          <div class="panel drei">
+          <a href="https://djangogirls.org/" target="_blank" rel="noopener noreferrer"><img width="300px" src="{% static 'bilder/djangogirls.png' %}" alt="django"  /></a>
+          </div>
+        </div>
+
+      <!-- Content Rechts end -->
+
+      <!-- Content Mitte begin -->
     		<div class="content container">
         		<div class="row">
             			<div class="col-md-8">
@@ -33,11 +56,18 @@
             			</div>
         		</div>
     		</div>
+      <!-- Content Mitte end -->
 
+
+
+      <!-- Footer begin -->
         <div class="page-footer">
 		   fdmlslfmsdlmfgsl
     		</div>
+      <!-- Footer end -->
+
     </div>
+    <!-- Wrapper end -->
 	</body>
 
 </html>

@@ -1,7 +1,11 @@
+
+
 #wrapper {
     width: 1280px;
+    position: relative;
     margin:0 auto;
     background-color: #eff2f8;
+      min-height: 1000px;
   }
 
 .page-header {
@@ -29,9 +33,43 @@
   color: #eff2f7;
   margin-top: 0;
   padding: 20px 20px 20px 40px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  min-height: 100px;
 }
 
-.content {
+.content_rechts {
+  float:right;
+  width: 300px;
+  margin:auto;
+  margin-right: 40px;
+  font-family: 'Montserrat';
+
+}
+
+.content_rechts p {
+
+  text-align: center;
+  font-size: 12pt;
+}
+
+.panel {
+
+
+  margin:10px auto;
+  width: 300px;
+
+}
+
+.panel img {
+  display:block;
+
+  margin: 0px  auto;
+}
+
+.content  {
+
   margin-left: 40px;
   margin:0 auto;
 }
