@@ -36,6 +36,16 @@
   margin:0 auto;
 }
 
+hr {
+    display: block;
+    height: 0.5px;
+    border: 0;
+    border-top: 0.2px solid #ccc;
+    margin: 0.5em 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Montserrat';
 }
@@ -44,7 +54,7 @@ h1, h2, h3, h4 {
   color: #828282;
 }
 
-.comment_count {
+.comment_count a, .post a {
   color: #828282;
 }
 
@@ -64,7 +74,7 @@ h1, h2, h3, h4 {
 }
 
 .post {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .post h1 a, .post h1 a:visited {
