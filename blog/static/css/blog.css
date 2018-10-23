@@ -5,7 +5,7 @@
     position: relative;
     margin:0 auto;
     background-color: #eff2f8;
-
+    min-height: 1000px;
   }
 
 .page-header {
@@ -27,6 +27,28 @@
   text-decoration: none;
 }
 
+.content  {
+
+  margin-left: 40px;
+  margin:0 auto;
+  padding-bottom: 4em;
+}
+
+.content.rechts {
+  float:right;
+  width: 300px;
+  margin:auto;
+  margin-right: 40px;
+  font-family: 'Montserrat';
+
+}
+
+.content.rechts p {
+
+  text-align: center;
+  font-size: 12pt;
+}
+
 .page-footer {
 
   background-color: #000103;
@@ -39,20 +61,6 @@
   min-height: 100px;
 }
 
-.content_rechts {
-  float:right;
-  width: 300px;
-  margin:auto;
-  margin-right: 40px;
-  font-family: 'Montserrat';
-
-}
-
-.content_rechts p {
-
-  text-align: center;
-  font-size: 12pt;
-}
 
 .panel {
 
@@ -66,12 +74,6 @@
   display:block;
 
   margin: 0px  auto;
-}
-
-.content  {
-
-  margin-left: 40px;
-  margin:0 auto;
 }
 
 hr {
