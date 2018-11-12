@@ -1,11 +1,14 @@
 {% extends 'blog/base.html' %}
 
+
+
 {% block content %}
+<h2>Zu veröffentliche Posts:</h2>
     {% for post in posts %}
         <div class="post">
-            <p class="date">erstellt am: {{ post.created_date|date:'d-m-Y' }} <a  href="{% url 'post_publish' pk=post.pk %}">Veröffentlichen</a> |
-            <a href="{% url 'post_edit' pk=post.pk %}">Bearbeiten</a> | 	<a href="{% url 'post_remove' pk=post.pk %}">Löschen</a></p>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p class="date">erstellt am: {{ post.created_date|date:'d-m-Y' }} <a  href="{% url 'blog:post_publish' pk=post.pk %}">Veröffentlichen</a> |
+            <a href="{% url 'blog:post_edit' pk=post.pk %}">Bearbeiten</a> | 	<a href="{% url 'blog:post_remove' pk=post.pk %}">Löschen</a></p>
+            <h1><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|truncatechars:200 }}</p>
             <hr>
         </div>

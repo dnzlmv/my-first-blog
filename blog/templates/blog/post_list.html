@@ -9,10 +9,10 @@
                     				<div class="date">
                         			<p>Veröffentlicht am: {{ post.published_date }}</p>
                     				</div>
-                    				<h1><a href="{% url 'post_detail' pk=post.pk %} ">{{ post.title }}</a></h1>
-                    				<p>{{ post.text|linebreaksbr|truncatechars:"200" }} <a href="{% url 'post_detail' pk=post.pk %}">Weiterlesen</a></p>
+                    				<h1><a href="{% url 'blog:post_detail' pk=post.pk %} ">{{ post.title }}</a></h1>
+                    				<p>{{ post.text|linebreaksbr|truncatechars:"200" }} <a href="{% url 'blog:post_detail' pk=post.pk %}">Weiterlesen</a></p>
 
-                <div class="comment_count">  <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>    </div>
+                <div class="comment_count">  <a href="{% url 'blog:post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>    </div>
 
                   <hr>
                 			</div>

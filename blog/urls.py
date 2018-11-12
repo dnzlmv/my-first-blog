@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from django.conf.urls import include, url
 
-
+app_name = 'blog'
 urlpatterns = [
     path('' , views.post_list, name='post_list'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
@@ -15,4 +15,3 @@ urlpatterns = [
     url(r'^comment/(?P<pk>\d+)/approve/$', views.comment_approve, name='comment_approve'),
     url(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
 ]
-
