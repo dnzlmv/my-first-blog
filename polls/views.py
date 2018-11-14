@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 from .models import Choice, Question
 
@@ -21,7 +22,7 @@ class DetailView(generic.DetailView):
     template_name = 'polls/detail.html'
 
     def get_queryset(self):
-        
+
         return Question.objects.filter(pub_date__lte=timezone.now())
 
 class ResultsView(generic.DetailView):
@@ -36,7 +37,7 @@ def vote(request, question_id):
 
         return render(request, 'polls/detail.html', {
             'question': question,
-            'error_message': "You didn't select a choice.",
+            'error_message': "Du hast keine Auswahl getroffen!",
         })
     else:
         selected_choice.votes += 1

@@ -33,10 +33,13 @@
 
 
         <div class="content rechts">
-          <p>Webangebote:</p>
-          <div class="panel eins">
-          <a href="https://www.hs-wismar.de" target="_blank" rel="noopener noreferrer"><img width="170px" src="{% static 'bilder/hswismar.png' %}" alt="hswismar"  /></a>
-          </div>
+
+         <div class="panel eins">
+           {%block polls %}
+            <a href="{% url 'polls:detail' 4 %}" ><img width="300px" src="{% static 'bilder/feedback.png' %}" alt="feedback"  /></a>
+           {% endblock %}
+
+         </div>
           <div class="panel zwei">
           <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer"><img width="300px" src="{% static 'bilder/django.png' %}" alt="django"  /></a>
           </div>
@@ -53,6 +56,7 @@
             			<div class="col-md-8">
             			{% block content %}
             			{% endblock %}
+
             			</div>
         		</div>
     		</div>
@@ -62,7 +66,8 @@
 
       <!-- Footer begin -->
         <div class="page-footer">
-		   fdmlslfmsdlmfgsl
+		   #Hier könnte Footer Inhalt stehen
+      <br>   <p>&copy; 2018 Danny Wodrich<p>
     		</div>
       <!-- Footer end -->
 

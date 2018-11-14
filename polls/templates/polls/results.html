@@ -1,4 +1,9 @@
-<h1>{{ question.question_text }}</h1>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<h2>{{ question.question_text }}</h2>
+<strong>Aktuelle Ergebnisse:</strong>
 
 <ul>
 {% for choice in question.choice_set.all %}
@@ -6,4 +11,6 @@
 {% endfor %}
 </ul>
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a href="{% url 'blog:post_list' %}">Zurück zur Startseite</a>
+
+{% endblock %}

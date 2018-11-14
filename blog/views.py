@@ -3,11 +3,14 @@ from django.utils import timezone
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
+from django.views import generic
 
-# Create your views here.
+from polls.models import Question, Choice
+
+#Posts
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/post_list.html',{'posts': posts})
 
 def post_detail(request, pk):
